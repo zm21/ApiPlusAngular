@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.DTO
 {
-    class UserRegisterDTO
+    public class UserRegisterDTO
     {
         [Required(ErrorMessage = "Email is required field")]
         public string Email { get; set; }
@@ -25,6 +25,7 @@ namespace DataAccess.DTO
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Age is required field")]
+        [Range(15, 100, ErrorMessage = "Age must be from 15 to 100")]
         public int  Age { get; set; }
     }
 }
