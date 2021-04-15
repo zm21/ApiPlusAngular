@@ -1,3 +1,4 @@
+using ApiPlusAngular.Helper;
 using DataAccess.EF;
 using DataAccess.Entitty;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -129,6 +130,7 @@ namespace ApiPlusAngular
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            //SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
         }
     }
 }

@@ -47,20 +47,23 @@ namespace ApiPlusAngular.Helper
             var admin = new User
             {
                 Email = email,
-                UserName = email
+                UserName = email,
+                Address = "Rivne",
+                Age = 17,
+                FullName = "Mykola Zaiets"
             };
-            var andrii = new User
-            {
-                Email = "zaietsmikola.21@gmail.com",
-                UserName = "zaietsmikola.21@gmail.com"
-            };
+            //var andrii = new User
+            //{
+            //    Email = "zaietsmikola.21@gmail.com",
+            //    UserName = "zaietsmikola.21@gmail.com"
+            //};
 
             var resultAdmin = userManager.CreateAsync(admin, "Qwerty1-").Result;
             resultAdmin = userManager.AddToRoleAsync(admin, "Admin").Result;
 
 
-            var resultAndrii = userManager.CreateAsync(andrii, "Qwerty1-").Result;
-            resultAndrii = userManager.AddToRoleAsync(andrii, "User").Result;
+            //var resultAndrii = userManager.CreateAsync(andrii, "Qwerty1-").Result;
+            //resultAndrii = userManager.AddToRoleAsync(andrii, "User").Result;
         }
     }
 }

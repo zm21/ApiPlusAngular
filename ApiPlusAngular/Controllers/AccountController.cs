@@ -135,7 +135,7 @@ namespace ApiPlusAngular.Controllers
                             Message = "Error",
                             Errors = new List<string>
                             {
-                               "Enter all fields!"
+                               "Login error!"
                             }
                         };
                     }
