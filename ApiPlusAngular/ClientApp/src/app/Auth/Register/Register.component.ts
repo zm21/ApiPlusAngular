@@ -30,14 +30,19 @@ export class RegisterComponent implements OnInit {
     }
     else{
       this.authService.register(this.model).subscribe(data=>{
-        if(data.status == 200){
+        if(data.code == 200){
           this.notifierService.notify("success", "You have successfully registered!")
+          this.authService.authEventsEmit();
           this.router.navigate(['/login'])
         }
         else{
-          data.errors.forEach(e => {
-            this.notifierService.notify("error", e)
-          });
+          for(var i = 0; i < data.errors.length; i++)
+          {
+            this.notifierService.notify("error", data.errors[i])
+          }
+          // data.errors.forEach(e => {
+          //   this.notifierService.notify("error", e)
+          // });
         }
       });
     }

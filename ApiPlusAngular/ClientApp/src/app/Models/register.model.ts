@@ -14,7 +14,8 @@ export class RegisterModel{
             this.FullName != "" && 
             this.Address != "" && 
             this.ConfirmPassword != "" &&
-            this.Age!= NaN){
+            this.Age!= NaN &&
+            this.Age>=15 && this.Age<=100){
             return true;
         }
         else{

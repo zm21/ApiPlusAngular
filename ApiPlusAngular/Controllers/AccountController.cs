@@ -56,7 +56,8 @@ namespace ApiPlusAngular.Controllers
                         Email = model.Email,
                         PhoneNumber = model.Phone,
                         Age = model.Age,
-                        FullName = model.FullName
+                        FullName = model.FullName,
+                        Address = model.Address
                     };
 
                     IdentityResult result = await _userManager.CreateAsync(user, model.Password);

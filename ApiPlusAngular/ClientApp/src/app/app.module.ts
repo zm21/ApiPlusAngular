@@ -10,16 +10,20 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './Auth/Login/Login.component';
 import { RegisterComponent } from './Auth/Register/Register.component';
 import { NotifierModule } from 'angular-notifier';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     NavMenuComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
-  ],
+    RegisterComponent,
+    UserProfileComponent,
+    AdminPanelComponent
+   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
